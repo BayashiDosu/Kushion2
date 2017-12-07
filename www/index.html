@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        ons.bootstrap();
+    </script>
+</head>
+<body>
+    <ons-tabbar var="tabbar">
+        <ons-tabbar-item
+            icon="home"
+            label="ホーム"
+            page="page1.html"
+            active="true"></ons-tabbar-item>
+        <ons-tabbar-item
+            icon="book"
+            label="本"
+            page="html/book/book.html"></ons-tabbar-item>
+        <ons-tabbar-item
+            icon="ion-tshirt"
+            label="服"
+            page="html/fashion/fashion.html"></ons-tabbar-item>
+        <ons-tabbar-item
+            icon="gear"
+            label="設定"
+            page="page1.html"></ons-tabbar-item>
+    </ons-tabbar>
+
+</body>
+</html>

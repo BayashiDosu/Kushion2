@@ -1,0 +1,33 @@
+<ons-navigator var="myNavigator" page="top.html">
+</ons-navigator> 
+
+
+
+<ons-template id="top.html">
+<ons-page>
+    
+
+    <ons-toolbar>
+    <div class="center">Page1</div>
+    </ons-toolbar>
+    <div style="text-align: center">
+        <table align="center">
+            <tr>
+                <th>本管理</th>
+                <th>服管理</th>
+            </tr>
+            <tr>
+        		<td>
+                    <ons-button modifier="quiet" ng-click="myNavigator.pushPage('html/book/bookTop.html')">
+                    <img src="ind_img01.png"></ons-button>
+                </td>
+        	    <td>
+                    <ons-button modifier="quiet" ng-click="myNavigator.pushPage('html/fashion/fashionTop.html')">
+                    <img src="ind_img01.png"></ons-button>
+                </td>
+        	</tr>
+        </table>
+        
+    </div>
+</ons-page>
+</ons-template>
