@@ -1,12 +1,4 @@
-<ons-navigator var="myNavigator" page="top.html">
-</ons-navigator> 
-
-
-
-<ons-template id="top.html">
 <ons-page>
-    
-
     <ons-toolbar>
     <div class="center">Page1</div>
     </ons-toolbar>
@@ -27,7 +19,9 @@
                 </td>
         	</tr>
         </table>
+        <p>
+            <ons-button onclick="myNavigator.pushPage('new_page.html',{data:{param1:'aaa'}})">Push page</ons-button>
+        </p>
         
     </div>
 </ons-page>
-</ons-template>
