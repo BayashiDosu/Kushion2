@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: https:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="www/monaca-onsenui/js/onsenui.min.js"></script>
+  <script src="www/js/search.js"></script>
+  <script src="www/js/db.js"></script>
+
+  <link rel="stylesheet" href="www/monaca-onsenui/loader.css">
+  <link rel="stylesheet" href="www/monaca-onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="www/monaca-onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+    <body>
+	  <ons-navigator id="navigator" page="list.html"></ons-navigator>
+		<ons-template id="list.html">
+		  <ons-page id="list-page">
+		    <ons-toolbar>
+		    	<div class="center">
+		    		本検索
+		    	</div>
+		    </ons-toolbar>
+		    <div class="content" style="text-align: center">
+          <div class="center" style="margin-bottom: 0.5em;">
+	          <ons-input id="search" modifier="underbar" placeholder="書籍名" float></ons-input>
+          </div>
+		      <ons-list>
+		        <div id="books"></div>
+		      </ons-list>
+              <ons-button id="back" onClick="bookPage(1)">戻る</ons-button>
+              <ons-button id="next" onClick="bookPage(2)">次へ</ons-button>
+		    </div>
+		  </ons-page>
+		</ons-template>
+	    
+		<ons-template id="detail.html">
+		  <ons-page id="detail-page">
+		    <ons-toolbar>
+		      <div class="left"><ons-back-button>戻る</ons-back-button></div>
+		      <div class="center shop-name">書籍詳細</div>
+		    </ons-toolbar>
+		
+		    <div class="content" id="book-info" style="text-align: center">
+		    	<img src="" id="book-image" ng-model="book-image" height="180" width="120"/>
+		        <ons-list class="book-info-list">
+		        <ons-list-header>タイトル</ons-list-header>
+		        <ons-list-item><span id="book-title" ng-model="book-title"></span></ons-list-item>
+		        <ons-list-header>説明</ons-list-header>
+		        <ons-list-item id="book-caption"></ons-list-item>
+		      </ons-list>
+              <ons-button id="entry" onclick="bookEntry()">登録</ons-button>
+              <div id="message"></div>
+		    </div>
+            
+		  </ons-page>
+		</ons-template>
+	</body>
+</html>

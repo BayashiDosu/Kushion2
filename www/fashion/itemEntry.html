@@ -1,0 +1,57 @@
+
+<!-- アイテムの情報を入力する画面です -->
+<ons-page >
+    
+
+<ons-toolbar>
+    <div class="left"><ons-back-button>戻る</ons-back-button></div>
+    <div class="center">アイテム登録</div>
+</ons-toolbar>
+
+<div style="text-align: center;">
+
+    <ons-list modifier="inset" style="margin-top: 10px">
+                <ons-list-header>アイテムイメージ</ons-list-header>
+                <ons-list-item>
+                <div style="text-align: center">
+                    <ons-button  onclick="snapPicture()" modifier="cta" >カメラ</ons-button>
+                    <ons-button onclick="getAlbum()" modifier="cta">アルバム</ons-button>
+                </div>
+                    
+
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="photo-container"><img id="itemImage" src=""  width="120" height="150"></div>
+                </ons-list-item>
+                <ons-list-header>アイテムカテゴリー</ons-list-header>
+                <ons-list-item>
+                    <select name="category" id="category"  ng-model="category">
+                        <option value="インナー">インナー</option>
+                        <option value="トップス">トップス</option>
+                        <option value="アウター">アウター</option>
+                        <option value="オールインワン/ワンピース">オールインワン/ワンピース</option>
+                        <option value="ボトムス">ボトムス</option>
+                        <option value="ソックス">ソックス</option>
+                        <option value="シューズ">シューズ</option>
+                        <option value="ヘアアクセサリー">ヘアアクセサリー</option>
+                    </select>
+                </ons-list-item>
+                <ons-list-header>シーズン</ons-list-header>
+                <ons-list-item>
+                    <input type="checkbox" id="season" name="spring" value="sp">春
+                    <input type="checkbox" id="season" name="summer" value="su">夏
+                    <input type="checkbox" id="season" name="autumn" value="au">秋
+                    <input type="checkbox" id="season" name="winter" value="wi">冬
+                </ons-list-item>
+            </ons-list>
+            <div>
+               <ons-button onclick="entryItem()" modifier="large">登録</ons-button>
+            </div>
+  
+
+   <!-- <ons-button ng-click="myNavigator.pushPage('html/fashion/itemSubmit.html')">登録</ons-button> -->
+    
+    
+</div>
+
+</ons-page>
